@@ -27,11 +27,12 @@ def main():
     if not os.access(filename, os.R_OK):	# Check you can read the file
       print '[-] ' + filename + ' access denied'
       exit(0)
+    print '[+] Reading from : ' + filename	# Display Message and read the file contents
+    readfile(filename)
   else:
     print '[-] Usage: ' + str(sys.argv[0]) + ' <filename>' # Print usage if not all parameters passed/Checked
     exit(0)
-  print '[+] Reading from : ' + filename	# Display Message and read the file contents
-  readfile(filename)
+  
   
 if __name__ == '__main__':
   main()
